@@ -12,6 +12,9 @@ import {
   SalesPage,
 } from "./pages";
 import ErrorPage from "./pages/error-page";
+import { CashPage } from "./pages/client/Cash";
+import { CashBalancePage } from "./pages/client/CashBalance";
+import { DiscountsPage } from "./pages/client/Discounts";
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +49,18 @@ export const router = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfilePage />,
+      },
+      {
+        path: "/cash",
+        element: <CashPage />,
+      },
+      {
+        path: "/cash-balance",
+        element: <CashBalancePage />,
+      },
+      {
+        path: "/discounts",
+        element: <DiscountsPage />,
       },
     ],
   },

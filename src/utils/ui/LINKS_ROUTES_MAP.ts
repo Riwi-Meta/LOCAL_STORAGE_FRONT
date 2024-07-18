@@ -35,6 +35,21 @@ export const LINKS_ROUTES_GENERAL: LinkRoute[] = [
     href: "/files",
     icon: "icon-[lets-icons--file]",
   },
+  {
+    title: "Cash",
+    href: "/cash",
+    icon: "icon-[lets-icons--file]",
+  },
+  {
+    title: "Cash balance",
+    href: "/cash-balance",
+    icon: "icon-[lets-icons--file]",
+  },
+  {
+    title: "Discounts",
+    href: "/discounts",
+    icon: "icon-[lets-icons--file]",
+  },
 ];
 
 export const LINKS_ROUTES_PERSONAL: LinkRoute[] = [
