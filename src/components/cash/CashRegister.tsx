@@ -1,27 +1,33 @@
-import { Button } from "@nextui-org/react";
-import { useEffect, useState } from "react";
+import { Select, SelectItem } from "@nextui-org/react";
+
+const options = [
+  { key: "cat", label: "Cat" },
+  { key: "dog", label: "Dog" },
+  { key: "dog", label: "Dog" },
+  { key: "dog", label: "Dog" },
+];
 
 export const CashRegister = () => {
-  const [isEnable, setIsEnable] = useState(true);
-
-
-  useEffect(() => {
-    console.log("hola");
-  }, [isEnable]);
-
-
-
   return (
-    <section className="p-10">
-      <div className="h-[200px] w-[100px] bg-red-500 rounded-lg flex flex-col gap-10 p-4 items-center justify-center">
-        <Button onClick={() => setIsEnable(!isEnable)} className="bg-yellow-200">
-          open
-        </Button>
+    <div className="bg-dark p-12">
 
-        <Button isDisabled={isEnable} className="bg-yellow-200">
-          close
-        </Button>
+      <div className="w-full mx-3  rounded-md !bg-white m-5 ">
+        <h1 className="font-sans font-medium text-dark text-2xl ">Branch</h1>
+        <Select placeholder="Enter Type" labelPlacement="outside" className="max-w-xs" disableSelectorIconRotation>
+          {options.map((option) => (
+            <SelectItem key={option.key}>{option.label}</SelectItem>
+          ))}
+        </Select>
       </div>
-    </section>
+
+      <div className="w-full mx-3 rounded-md !bg-white ">
+        <h1 className="font-sans font-medium text-dark text-2xl ">Cash Machine</h1>
+        <Select placeholder="Enter Type" labelPlacement="outside" className="max-w-xs" disableSelectorIconRotation>
+          {options.map((option) => (
+            <SelectItem key={option.key}>{option.label}</SelectItem>
+          ))}
+        </Select>
+      </div>
+    </div>
   );
 };
