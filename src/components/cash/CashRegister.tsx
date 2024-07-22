@@ -1,5 +1,6 @@
 import { Select, SelectItem } from "@nextui-org/react";
 import {Input} from "@nextui-org/react";
+import {Textarea} from "@nextui-org/react";
 
 const options = [
   { key: "cat", label: "Cat" },
@@ -45,6 +46,22 @@ export const CashRegister = () => {
           }
         />
       </div>
+
+      <div className=" mx-3 rounded-md m-5 ">
+        <h1 className="font-sans font-medium text-dark text-2xl ">Note</h1>
+
+<div className="h-48  bg-dark">
+<Textarea
+      label="Description"
+      placeholder="Enter Description"
+    
+    />
+</div>
+        
+
+      </div>
+
+
 
     </div>
   );
