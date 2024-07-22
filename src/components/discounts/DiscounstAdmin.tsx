@@ -63,7 +63,9 @@ export const DiscounstAdmin: React.FC<props> = () => {
                     </svg>
                   }
                 >
-                  <Button color="undefined">Filter</Button>
+                  <Button color="undefined" className="filterButtonCustom">
+                    Filter
+                  </Button>
                 </DropdownTrigger>
                 <DropdownMenu aria-label="Static Actions">
                   <DropdownItem>Ascendent</DropdownItem>
@@ -73,9 +75,7 @@ export const DiscounstAdmin: React.FC<props> = () => {
                 </DropdownMenu>
               </Dropdown>
               <div className="p-2">
-                {" "}
-                <div className="text-orange-500 font-bold">
-                  {" "}
+                <div className="font-bold textLabelCustom">
                   <Slider
                     label={<label className="slider-label">Ammount</label>}
                     size="sm"
@@ -100,11 +100,11 @@ export const DiscounstAdmin: React.FC<props> = () => {
                         viewBox="0 0 24 24"
                         style={{ transform: "rotate(270deg)" }}
                       >
-                        <path fill="currentColor" d="M16 19L5 12l11-7z" />
+                        <path fill="#202020" d="M16 19L5 12l11-7z" />
                       </svg>
                     }
                   >
-                    <Button color="undefined" variant="bordered">
+                    <Button color="undefined" className="statusButtonCustom">
                       Status
                     </Button>
                   </DropdownTrigger>
@@ -171,10 +171,53 @@ export const DiscounstAdmin: React.FC<props> = () => {
               </svg>
             </div>
           </div>
-          <div className="bg-white rounded-lg p-4 shadow-md">jelou</div>
-          <div className="bg-white rounded-lg p-4 shadow-md">jelou</div>
-          <div className="bg-white rounded-lg p-4 shadow-md">jelou</div>
-          <div className="bg-white rounded-lg p-4 shadow-md">jelou</div>
+          <div className="bg-casiBlack rounded-3xl p-6 shadow-md flex align-middle">
+            <div className="flex flex-col gap-12 w-full h-full">
+              {/* contenedor de nombre de producto,icono editar y codigo de producto*/}
+              <div className="w-full h-auto flex flex-col">
+                <div className="flex justify-between">
+                  <p className="text-white font-bold productNameDiscountCustom">
+                    producto
+                  </p>
+                  <svg
+                  // onClick={} 
+                  className="size-9"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      {" "}
+                      <path
+                        d="M14 6L8 12V16H12L18 10M14 6L17 3L21 7L18 10M14 6L18 10M10 4L4 4L4 20L20 20V14"
+                        stroke="#ffffff"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>{" "}
+                    </g>
+                  </svg>
+                </div>
+                <p className="codeProductCustom">codigo</p>
+              </div>
+              <p className="valueAssignedToProductCustom bg-orange-600">56%</p>
+              <div className="w-full h-auto flex justify-between">
+                <p className="stateDiscountCustom bg-lime-800">estado</p>
+                <i className="deleteDicountCardCustom bg-red-700">
+                  icono borrar
+                </i>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white rounded-3xl p-6 shadow-md">jelou</div>
+          <div className="bg-white rounded-3xl p-6 shadow-md">jelou</div>
+          <div className="bg-white rounded-3xl p-6 shadow-md">jelou</div>
         </div>
         <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
           <ModalContent>
