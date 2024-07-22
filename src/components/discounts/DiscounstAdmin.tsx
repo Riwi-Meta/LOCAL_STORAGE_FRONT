@@ -22,8 +22,8 @@ export const DiscounstAdmin: React.FC<props> = () => {
   return (
     <div className="p-10 flex flex-row space-x-4">
       {" "}
-      <div className="w-1/4">
-        <div className="bg-white rounded-2xl shadow-md p-6">
+      <div className="w-1/5">
+        <div className="bg-white rounded-3xl shadow-md p-6">
           <div className="flex">
             <div className="w-full">
               <Input
@@ -36,7 +36,7 @@ export const DiscounstAdmin: React.FC<props> = () => {
                   >
                     <path
                       fill="#666666"
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0a5.5 5.5 0 0 1 11 0"
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a0.5 0.5 0 0 1-.707.707l-3.85-3.85a0.5 0.5 0 0 1-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0a5.5 5.5 0 0 1 11 0"
                     />
                   </svg>
                 }
@@ -119,9 +119,62 @@ export const DiscounstAdmin: React.FC<props> = () => {
         </div>
       </div>
       <div className="w-3/4">
-        <div className="bg-white rounded-lg shadow-md p-4">
-          {" "}
-          <Button onPress={onOpen}>New Discount</Button>
+        <div className="w-full h-[25%] gap-8 grid grid-cols-3">
+          <div className="bg-white rounded-3xl shadow-md p-6">
+            <div className="add-buttonCustom">
+              <Button
+                className="font-bold left-0 top-0 text-3xl"
+                color="undefined"
+                onPress={onOpen}
+              >
+                New Discount
+              </Button>
+            </div>
+            <div className="icon-button-add-custom p-3">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                width="8em"
+                height="8em"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <path
+                    d="M8 12H16"
+                    stroke="#FF9500"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>{" "}
+                  <path
+                    d="M12 16V8"
+                    stroke="#FF9500"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>{" "}
+                  <path
+                    d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                    stroke="#FF9500"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>{" "}
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg p-4 shadow-md">jelou</div>
+          <div className="bg-white rounded-lg p-4 shadow-md">jelou</div>
+          <div className="bg-white rounded-lg p-4 shadow-md">jelou</div>
+          <div className="bg-white rounded-lg p-4 shadow-md">jelou</div>
         </div>
         <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
           <ModalContent>

@@ -5,3 +5,16 @@
 .filterText{
     color: #BEBEBE !important;
 }
+
+.add-buttonCustom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FF9500;
+}
+
+.icon-button-add-custom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
