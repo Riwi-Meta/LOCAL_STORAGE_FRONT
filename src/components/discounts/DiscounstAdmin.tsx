@@ -28,10 +28,8 @@ export const DiscounstAdmin: React.FC<props> = () => {
             <div className="w-full">
               <Input
                 startContent={
-                  <svg
+                  <svg className="size-5"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="1.3em"
-                    height="1.3em"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -50,10 +48,8 @@ export const DiscounstAdmin: React.FC<props> = () => {
                 <DropdownTrigger
                   className="p-6"
                   startContent={
-                    <svg
+                    <svg className="size-5"
                       xmlns="http://www.w3.org/2000/svg"
-                      width="1.5em"
-                      height="1.5em"
                       viewBox="0 0 512 512"
                     >
                       <path
@@ -63,7 +59,7 @@ export const DiscounstAdmin: React.FC<props> = () => {
                     </svg>
                   }
                 >
-                  <Button color="undefined" className="filterButtonCustom">
+                  <Button color="undefined" className="font-bold text-gray">
                     Filter
                   </Button>
                 </DropdownTrigger>
@@ -75,9 +71,9 @@ export const DiscounstAdmin: React.FC<props> = () => {
                 </DropdownMenu>
               </Dropdown>
               <div className="p-2">
-                <div className="font-bold textLabelCustom">
+                <div className="font-bold textLabelCustom text-orange">
                   <Slider
-                    label={<label className="slider-label">Ammount</label>}
+                    label={<label className="text-gray">Ammount</label>}
                     size="sm"
                     color="warning"
                     step={0.01}
@@ -93,10 +89,8 @@ export const DiscounstAdmin: React.FC<props> = () => {
                   <DropdownTrigger
                     className="w-full justify-between"
                     endContent={
-                      <svg
+                      <svg className="size-6"
                         xmlns="http://www.w3.org/2000/svg"
-                        width="1.5em"
-                        height="1.5em"
                         viewBox="0 0 24 24"
                         style={{ transform: "rotate(270deg)" }}
                       >
@@ -104,7 +98,7 @@ export const DiscounstAdmin: React.FC<props> = () => {
                       </svg>
                     }
                   >
-                    <Button color="undefined" className="statusButtonCustom">
+                    <Button color="undefined" className="bg-casiWhite text-gray font-bold">
                       Status
                     </Button>
                   </DropdownTrigger>
@@ -121,7 +115,7 @@ export const DiscounstAdmin: React.FC<props> = () => {
       <div className="w-3/4">
         <div className="w-full h-[25%] gap-8 grid grid-cols-3">
           <div className="bg-white rounded-3xl shadow-md p-6">
-            <div className="add-buttonCustom">
+            <div className="text-orange">
               <Button
                 className="font-bold left-0 top-0 text-3xl"
                 color="undefined"
