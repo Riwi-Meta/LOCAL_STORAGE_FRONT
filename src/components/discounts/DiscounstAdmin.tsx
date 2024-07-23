@@ -14,7 +14,7 @@ import {
 } from "@nextui-org/react";
 
 import { Slider } from "@nextui-org/react";
-import { CardDiscount, CardDiscountInactive } from "./CardDiscountInactive";
+import { CardDiscountInactive } from "./CardDiscountInactive";
 import { CardDiscountActive } from "./CardDiscountActive";
 
 interface props {}
@@ -62,7 +62,7 @@ export const DiscounstAdmin: React.FC<props> = () => {
                     </svg>
                   }
                 >
-                  <Button color="undefined" className="font-bold text-gray">
+                  <Button className="font-bold text-gray bg-transparent">
                     Filter
                   </Button>
                 </DropdownTrigger>
@@ -103,7 +103,6 @@ export const DiscounstAdmin: React.FC<props> = () => {
                     }
                   >
                     <Button
-                      color="undefined"
                       className="bg-casiWhite text-gray font-bold"
                     >
                       Status
@@ -124,8 +123,7 @@ export const DiscounstAdmin: React.FC<props> = () => {
           <div className="bg-white rounded-3xl shadow-md p-6">
             <div className="text-orange">
               <Button
-                className="font-bold left-0 top-0 text-3xl"
-                color="undefined"
+                className="font-bold left-0 top-0 text-3xl bg-transparent text-orange"
                 onPress={onOpen}
               >
                 New Discount
@@ -172,8 +170,8 @@ export const DiscounstAdmin: React.FC<props> = () => {
               </svg>
             </div>
           </div>
-          <CardDiscountInactive/>
-          <CardDiscountActive/>
+          <CardDiscountInactive />
+          <CardDiscountActive />
           <div className="bg-white rounded-3xl p-6 shadow-md">jelou</div>
           <div className="bg-white rounded-3xl p-6 shadow-md">jelou</div>
         </div>
