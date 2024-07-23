@@ -17,12 +17,18 @@ export default {
     },
     extend: {},
     keyframes: {
+      AnimacionRotar: {
+        "0%": { transform: "rotate(0deg)" },
+        "100%": { transform: "rotate(90deg)" },
+      },
       Rebote: {
         "0%, 100%": { transform: "scale(1)",opacity: 1 },
         "50%": { transform: "scale(1.03)", opacity: 0.5 },
       },
     } ,
     animation: {
+      Rotar: "AnimacionRotar 0.5s linear reverse",
+      Giro: "AnimacionRotar 0.5s linear",
       Rebote: "Rebote 1.2s ease-in-out infinite",
     },
   },
