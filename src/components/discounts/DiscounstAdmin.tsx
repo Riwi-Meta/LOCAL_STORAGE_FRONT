@@ -102,9 +102,7 @@ export const DiscounstAdmin: React.FC<props> = () => {
                       </svg>
                     }
                   >
-                    <Button
-                      className="bg-casiWhite text-gray font-bold"
-                    >
+                    <Button className="bg-casiWhite text-gray font-bold">
                       Status
                     </Button>
                   </DropdownTrigger>
@@ -120,16 +118,16 @@ export const DiscounstAdmin: React.FC<props> = () => {
       </div>
       <div className="w-3/4">
         <div className="w-full h-[25%] gap-8 grid grid-cols-3">
-          <div className="bg-white rounded-3xl shadow-md p-6">
+          <div
+            onClick={onOpen}
+            className="bg-white rounded-3xl shadow-md p-6 cursor-pointer transition-all hover:animate-Rebote"
+          >
             <div className="text-orange">
-              <Button
-                className="font-bold left-0 top-0 text-3xl bg-transparent text-orange"
-                onPress={onOpen}
-              >
+              <div className="font-bold left-0 top-0 text-3xl bg-transparent text-orange">
                 New Discount
-              </Button>
+              </div>
             </div>
-            <div className="icon-button-add-custom flex content-center justify-center p-3">
+            <div className="flex justify-center p-6">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"

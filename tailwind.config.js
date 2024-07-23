@@ -16,6 +16,15 @@ export default {
       white:"#ffffff"
     },
     extend: {},
+    keyframes: {
+      Rebote: {
+        "0%, 100%": { transform: "scale(1)",opacity: 1 },
+        "50%": { transform: "scale(1.03)", opacity: 0.5 },
+      },
+    } ,
+    animation: {
+      Rebote: "Rebote 1.2s ease-in-out infinite",
+    },
   },
   plugins: [addDynamicIconSelectors(), nextui()],
 };
