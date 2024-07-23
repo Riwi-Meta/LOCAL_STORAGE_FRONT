@@ -12,10 +12,16 @@ export default {
     colors: {
       dark: "#202020",
       blue: "#005BC4",
+      transparent: "#ffffff00",
+      orange: "#FF9500",
+      casiOrange: "#fff4e6",
+      casiBlack: "#464646",
+      gray: "#BEBEBE",
+      casiWhite: "#EFEFEF",
+      green: "#027400",
+      red: "#C20000",
+      white: "#ffffff",
     },
   },
-  plugins: [
-    addDynamicIconSelectors(),
-    nextui({ addCommonColors: true, colors: { dark: "#202020", blue: "#005BC4" } }),
-  ],
+  plugins: [addDynamicIconSelectors(), nextui({ addCommonColors: true, colors: { dark: "#202020", blue: "#005BC4" } })],
 };
