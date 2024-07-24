@@ -20,6 +20,7 @@ import { DateInput } from "@nextui-org/react";
 import { parseDate, getLocalTimeZone } from "@internationalized/date";
 import { useDateFormatter } from "@react-aria/i18n";
 import React from "react";
+import { CardAddDiscount } from "./CardAddDiscount";
 export const DiscounstAdmin: React.FC = () => {
   const [useStatus, setUseStatus] = React.useState(false);
 
@@ -148,57 +149,10 @@ export const DiscounstAdmin: React.FC = () => {
         </div>
       </div>
       {/* contenedor de tarjetas y boton para agregar nuevo descuento */}
-      <div className="w-3/4">
-        <div className="w-full h-[25%] gap-8 grid grid-cols-3">
-          <div
-            onClick={onOpen}
-            className="bg-white rounded-3xl shadow-md p-6 cursor-pointer transition-all hover:animate-Rebote"
-          >
-            <div className="text-orange">
-              <div className="font-bold left-0 top-0 text-3xl bg-transparent text-orange">
-                New Discount
-              </div>
-            </div>
-            <div className="flex justify-center p-6">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                width="8em"
-                height="8em"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  {" "}
-                  <path
-                    d="M8 12H16"
-                    stroke="#FF9500"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>{" "}
-                  <path
-                    d="M12 16V8"
-                    stroke="#FF9500"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>{" "}
-                  <path
-                    d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
-                    stroke="#FF9500"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>{" "}
-                </g>
-              </svg>
-            </div>
+      <div className="w-full">
+        <div className="gap-8 grid grid-cols-4">
+          <div onClick={onOpen}>
+            <CardAddDiscount />
           </div>
           <CardDiscountInactive />
           <CardDiscountActive />
@@ -206,17 +160,20 @@ export const DiscounstAdmin: React.FC = () => {
           <CardDiscountActive />
           <CardDiscountActive />
         </div>
-        <Modal className="fixed flex justify-center" 
-        isOpen={isOpen} onOpenChange={onOpenChange}>
-          <ModalContent className="p-4 w-max flex h-max rounded-3xl justify-center gap-5">
+        <Modal
+          className="flex justify-start min-w-[78rem] min-h-[42rem]"
+          isOpen={isOpen}
+          onOpenChange={onOpenChange}
+        >
+          <ModalContent className="p-6 w-max flex rounded-3xl justify-center gap-5">
             {(onClose) => (
-              <>
-                <ModalHeader className="flex flex-col text-4xl">
+              <div className="flex flex-col gap-y-8">
+                <ModalHeader className="flex flex-col text-6xl my-3 text-black">
                   New Discount
                 </ModalHeader>
-                <ModalBody className="flex flex-col w-full h-max">
+                <ModalBody className="flex flex-col max-w-[55rem] mx-4">
                   <div className="w-full flex ">
-                    <div className="w-full h-[6%] gap-8 grid grid-cols-2">
+                    <div className="w-full gap-x-20 gap-y-12 grid grid-cols-2">
                       <div className="bg-default-400 ">
                         Name
                         <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
@@ -307,19 +264,22 @@ export const DiscounstAdmin: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-3/4"></div>
                 </ModalBody>
-                <ModalFooter>
-                  <Button className="rounded-md"
-                  color="danger" onPress={onClose}>
+                <ModalFooter className="flex justify-end gap-14">
+                  <Button
+                    className="rounded-md p-6 size-28 text-xl font-semibold bg-red text-white"
+                    onPress={onClose}
+                  >
                     Cancel
                   </Button>
-                  <Button className="rounded-md" 
-                  color="primary" onPress={onClose}>
+                  <Button
+                    className="rounded-md p-6 size-48 text-xl font-semibold text-white bg-orange"
+                    onPress={onClose}
+                  >
                     Create Discount
                   </Button>
                 </ModalFooter>
-              </>
+              </div>
             )}
           </ModalContent>
         </Modal>

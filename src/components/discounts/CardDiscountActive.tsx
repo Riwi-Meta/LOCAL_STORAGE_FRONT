@@ -1,7 +1,7 @@
 export const CardDiscountActive = () => {
   return (
     <div className="bg-white rounded-3xl p-6 shadow-md flex align-middle">
-      <div className="flex flex-col gap-12 w-full h-full">
+      <div className="flex flex-col gap-6">
         {/* contenedor de nombre de producto,icono editar y codigo de producto*/}
         <div className="w-full h-auto flex flex-col">
           <div className="flex justify-between">
@@ -21,14 +21,13 @@ export const CardDiscountActive = () => {
                 stroke-linejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
-                {" "}
                 <path
                   d="M14 6L8 12V16H12L18 10M14 6L17 3L21 7L18 10M14 6L18 10M10 4L4 4L4 20L20 20V14"
                   stroke="#003C74"
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                ></path>{" "}
+                ></path>
               </g>
             </svg>
           </div>

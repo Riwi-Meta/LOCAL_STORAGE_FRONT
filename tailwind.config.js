@@ -13,7 +13,8 @@ export default {
       casiWhite:"#EFEFEF",
       green:"#027400",
       red:"#C20000",
-      white:"#ffffff"
+      white:"#ffffff",
+      black:"#202020"
     },
     extend: {},
     keyframes: {

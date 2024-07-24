@@ -1,7 +1,7 @@
 export const CardDiscountInactive = () => {
   return (
     <div className="bg-casiBlack rounded-3xl p-6 shadow-md flex align-middle">
-      <div className="flex flex-col gap-12 w-full h-full">
+      <div className="flex flex-col gap-6">
         {/* contenedor de nombre de producto,icono editar y codigo de producto*/}
         <div className="w-full h-auto flex flex-col">
           <div className="flex justify-between">
