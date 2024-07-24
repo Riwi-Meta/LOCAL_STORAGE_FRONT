@@ -21,6 +21,7 @@ import { parseDate, getLocalTimeZone } from "@internationalized/date";
 import { useDateFormatter } from "@react-aria/i18n";
 import React from "react";
 import { CardAddDiscount } from "./CardAddDiscount";
+import { CustomInput } from "./CustomInput";
 export const DiscounstAdmin: React.FC = () => {
   const [useStatus, setUseStatus] = React.useState(false);
 
@@ -154,13 +155,34 @@ export const DiscounstAdmin: React.FC = () => {
           <div onClick={onOpen}>
             <CardAddDiscount />
           </div>
-          <CardDiscountInactive />
-          <CardDiscountActive />
-          <CardDiscountInactive />
-          <CardDiscountActive />
-          <CardDiscountActive />
+          <CardDiscountInactive
+            NameProduct={"Rice"}
+            Code={"DR-01655"}
+            Discount={"5.25"}
+          />
+          <CardDiscountActive
+            NameProduct={"Meat"}
+            Code={"DM-01325"}
+            Discount={"15.25"}
+          />
+          <CardDiscountInactive
+            NameProduct={"Rice"}
+            Code={"DR-01655"}
+            Discount={"5.25"}
+          />
+          <CardDiscountActive
+            NameProduct={"Meat"}
+            Code={"DM-01325"}
+            Discount={"15.25"}
+          />
+          <CardDiscountActive
+            NameProduct={"Meat"}
+            Code={"DM-01325"}
+            Discount={"15.25"}
+          />
         </div>
         <Modal
+          hideCloseButton
           className="flex justify-start min-w-[78rem] min-h-[42rem]"
           isOpen={isOpen}
           onOpenChange={onOpenChange}
@@ -174,24 +196,28 @@ export const DiscounstAdmin: React.FC = () => {
                 <ModalBody className="flex flex-col max-w-[55rem] mx-4">
                   <div className="w-full flex ">
                     <div className="w-full gap-x-20 gap-y-12 grid grid-cols-2">
-                      <div className="bg-default-400 ">
-                        Name
-                        <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
-                          <Input type="string" label="Enter Stock" />
-                        </div>
-                      </div>
-                      <div className="bg-default-400 ">
-                        Ammount
-                        <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
-                          <Input
-                            type="number"
-                            placeholder="000.000,00"
-                            labelPlacement="outside"
-                          />
-                        </div>
-                      </div>
-                      <div className="bg-default-400 ">
-                        Type
+                      <CustomInput name="Name">
+                        <Input
+                          size="sm"
+                          type="string"
+                          label={
+                            <label className="text-gray font-semibold">
+                              Enter Stock
+                            </label>
+                          }
+                        />
+                      </CustomInput>
+                      <CustomInput name="Ammount">
+                        <Input
+                          radius="sm"
+                          size="lg"
+                          type="number"
+                          placeholder="000.000,00"
+                          labelPlacement="outside"
+                          className="placeholder:font-bold placeholder:text-gray"
+                        />
+                      </CustomInput>
+                      <CustomInput name="Type">
                         <Dropdown>
                           <DropdownTrigger
                             className="w-full justify-between"
@@ -206,7 +232,7 @@ export const DiscounstAdmin: React.FC = () => {
                               </svg>
                             }
                           >
-                            <Button className="bg-casiWhite text-gray font-bold">
+                            <Button className="bg-casiWhite text-gray font-semibold">
                               Enter Type
                             </Button>
                           </DropdownTrigger>
@@ -215,9 +241,8 @@ export const DiscounstAdmin: React.FC = () => {
                             <DropdownItem>Inactive</DropdownItem>
                           </DropdownMenu>
                         </Dropdown>
-                      </div>
-                      <div className="bg-default-400 ">
-                        Status
+                      </CustomInput>
+                      <CustomInput name="Status">
                         <Dropdown>
                           <DropdownTrigger
                             className="w-full justify-between"
@@ -232,7 +257,7 @@ export const DiscounstAdmin: React.FC = () => {
                               </svg>
                             }
                           >
-                            <Button className="bg-casiWhite text-gray font-bold">
+                            <Button className="bg-casiWhite text-gray font-semibold">
                               Select Status
                             </Button>
                           </DropdownTrigger>
@@ -241,33 +266,16 @@ export const DiscounstAdmin: React.FC = () => {
                             <DropdownItem>Inactive</DropdownItem>
                           </DropdownMenu>
                         </Dropdown>
-                      </div>
-                      <div className="bg-default-400 ">
-                        Date
-                        <div className="w-full flex flex-row gap-2">
-                          <div className="w-full flex flex-col gap-y-2">
-                            <DateInput
-                              label="Date (controlled)"
-                              value={value}
-                              onChange={setValue}
-                            />
-                            <p className="text-default-500 text-sm">
-                              Selected date:{" "}
-                              {value
-                                ? formatter.format(
-                                    value.toDate(getLocalTimeZone())
-                                  )
-                                : "--"}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                      </CustomInput>
+                      <CustomInput name="Date">
+                        <DateInput value={value} onChange={setValue} />
+                      </CustomInput>
                     </div>
                   </div>
                 </ModalBody>
                 <ModalFooter className="flex justify-end gap-14">
                   <Button
-                    className="rounded-md p-6 size-28 text-xl font-semibold bg-red text-white"
+                    className="rounded-md p-6 size-28 text-xl font-semibol bg-transparent text-black  "
                     onPress={onClose}
                   >
                     Cancel

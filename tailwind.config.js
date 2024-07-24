@@ -14,7 +14,8 @@ export default {
       green:"#027400",
       red:"#C20000",
       white:"#ffffff",
-      black:"#202020"
+      black:"#202020",
+      subtitleBlack:"#404040"
     },
     extend: {},
     keyframes: {

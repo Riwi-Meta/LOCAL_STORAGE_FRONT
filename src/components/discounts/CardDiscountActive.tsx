@@ -1,4 +1,11 @@
-export const CardDiscountActive = () => {
+interface CustomCardDiscountActiveProps {
+  NameProduct: string;
+  Code: string;
+  Discount: GLfloat;
+  [key: string]: any;
+}
+
+export const CardDiscountActive = ({NameProduct, Code,Discount}) => {
   return (
     <div className="bg-white rounded-3xl p-6 shadow-md flex align-middle">
       <div className="flex flex-col gap-6">
@@ -6,7 +13,7 @@ export const CardDiscountActive = () => {
         <div className="w-full h-auto flex flex-col">
           <div className="flex justify-between">
             <p className="text-black font-bold productNameDiscountCustom text-3xl">
-              Discount on Meat
+              Discount on {NameProduct}
             </p>
             <svg
               className="size-8"
@@ -31,10 +38,10 @@ export const CardDiscountActive = () => {
               </g>
             </svg>
           </div>
-          <p className="text-gray codeProductCustom font-bold">code:DM-01325</p>
+          <p className="text-gray codeProductCustom font-bold">code:{Code}</p>
         </div>
         <p className="valueAssignedToProductCustom  text-orange font-bold text-xl">
-          -15.25%
+          -{Discount}%
         </p>
         <div className="w-full h-auto flex justify-between">
           <p className="stateDiscountCustom text-green text-3xl font-bold">

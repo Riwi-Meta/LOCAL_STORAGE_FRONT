@@ -1,4 +1,11 @@
-export const CardDiscountInactive = () => {
+interface CustomCardDiscountInactiveProps {
+  NameProduct: string;
+  Code: string;
+  Discount: GLfloat;
+  [key: string]: any;
+}
+
+export const CardDiscountInactive = ({NameProduct, Code,Discount}) => {
   return (
     <div className="bg-casiBlack rounded-3xl p-6 shadow-md flex align-middle">
       <div className="flex flex-col gap-6">
@@ -6,7 +13,7 @@ export const CardDiscountInactive = () => {
         <div className="w-full h-auto flex flex-col">
           <div className="flex justify-between">
             <p className="text-white font-bold productNameDiscountCustom text-3xl">
-              Discount on Rice
+              Discount on {NameProduct}
             </p>
             <svg
               // onClick={}
@@ -22,21 +29,20 @@ export const CardDiscountInactive = () => {
                 stroke-linejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
-                {" "}
                 <path
                   d="M14 6L8 12V16H12L18 10M14 6L17 3L21 7L18 10M14 6L18 10M10 4L4 4L4 20L20 20V14"
                   stroke="#ffffff"
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                ></path>{" "}
+                ></path>
               </g>
             </svg>
           </div>
-          <p className="text-gray codeProductCustom font-bold">code:DR-01655</p>
+          <p className="text-gray codeProductCustom font-bold">code:{Code}</p>
         </div>
         <p className="valueAssignedToProductCustom  text-white font-bold text-xl">
-          -5.25%
+          -{Discount}%
         </p>
         <div className="w-full h-auto flex justify-between">
           <p className="stateDiscountCustom text-orange text-3xl font-bold">

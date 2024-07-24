@@ -3,7 +3,7 @@ import { LINKS_ROUTES_GENERAL, LINKS_ROUTES_PERSONAL } from "../../utils";
 
 export const SideNav = () => {
   return (
-    <aside className="w-[220px] border-1.5 flex flex-col items-center justify-center gap-4 bg-gray-100 h-screen py-4">
+    <aside className="w-[220px] border-1.5 flex flex-col items-center justify-center gap-4 bg-white h-screen py-4">
       <figure className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-all duration-300 py-2 px-4">
         <img src="/brand/logo.svg" alt="logo" className="w-7 h-7" />
         <h2 className="text-xl font-bold">LocalStorage</h2>
