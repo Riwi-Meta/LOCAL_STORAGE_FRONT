@@ -4,6 +4,8 @@ import { Textarea } from "@nextui-org/react";
 import "./../../styles/component.css";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
 import { CashTitle } from "./CashTitle";
+import { CustomInput } from "../discounts/CustomInput";
+import { CardAddDiscount } from "../discounts/CardAddDiscount";
 
 const options = [
   { key: "cat", label: "Cat" },
@@ -15,7 +17,8 @@ const options = [
 export const CashRegister = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
-    //DIV PRINCIPAL
+  <div className="flex">
+    {/* //DIV IZQUIERDA */}
     <div className="bg-white drop-shadow-xl p-12 rounded-2xl  flex flex-col h-5/6 w-7/12 m-10">
       <CashTitle title="Cash Register" subtitle="Set your daily cash balance, let’s work!">
         <svg className="size-24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -154,5 +157,22 @@ export const CashRegister = () => {
         </div>
       </div>
     </div>
+
+    <div className="p-12 flex flex-col m-10">
+      {/* //DIV DERECHA */}
+      <CashTitle title="Last notes" subtitle="Check your last notes">
+      <svg className="size-24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M6 1C4.34315 1 3 2.34315 3 4V20C3 21.6569 4.34315 23 6 23H18C19.6569 23 21 21.6569 21 20V8.82843C21 8.03278 20.6839 7.26972 20.1213 6.70711L15.2929 1.87868C14.7303 1.31607 13.9672 1 13.1716 1H6ZM5 4C5 3.44772 5.44772 3 6 3H12V8C12 9.10457 12.8954 10 14 10H19V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V4ZM18.5858 8L14 3.41421V8H18.5858Z" fill="#FF9500"></path> </g></svg>
+      </CashTitle>
+    </div>
+
+    <div className="Notas">
+
+    <div>
+
+    </div>
+    </div>
+
+  </div>
+
   );
 };
