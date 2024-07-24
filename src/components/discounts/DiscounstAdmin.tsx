@@ -232,7 +232,10 @@ export const DiscounstAdmin: React.FC = () => {
                               </svg>
                             }
                           >
-                            <Button className="bg-casiWhite text-gray font-semibold">
+                            <Button
+                              size="lg"
+                              className="bg-casiWhite text-gray font-semibold"
+                            >
                               Enter Type
                             </Button>
                           </DropdownTrigger>
@@ -257,7 +260,10 @@ export const DiscounstAdmin: React.FC = () => {
                               </svg>
                             }
                           >
-                            <Button className="bg-casiWhite text-gray font-semibold">
+                            <Button
+                              size="lg"
+                              className="bg-casiWhite text-gray font-semibold"
+                            >
                               Select Status
                             </Button>
                           </DropdownTrigger>
@@ -268,7 +274,8 @@ export const DiscounstAdmin: React.FC = () => {
                         </Dropdown>
                       </CustomInput>
                       <CustomInput name="Date">
-                        <DateInput value={value} onChange={setValue} />
+                        <DateInput 
+                        size="lg" value={value} onChange={setValue} />
                       </CustomInput>
                     </div>
                   </div>
