@@ -1,9 +1,14 @@
+
+
 interface CashTitleProps { 
   title: string;
   subtitle: string;
   children: React.ReactNode;
 
 }
+
+
+
 export const CashTitle = ({ children, title, subtitle }:CashTitleProps) => {
   return (
     <div className="tituloyicon flex">

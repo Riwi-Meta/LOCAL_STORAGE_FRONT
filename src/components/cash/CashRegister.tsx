@@ -2,9 +2,10 @@ import { Select, SelectItem } from "@nextui-org/react";
 import { Input } from "@nextui-org/react";
 import { Textarea } from "@nextui-org/react";
 import "./../../styles/component.css";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
+import { Button, useDisclosure } from "@nextui-org/react";
 import { CashTitle } from "./CashTitle";
 import CashNotes from "./CashNotes";
+import { CashButton } from "./CashButton";
 
 const options = [
   { key: "cat", label: "Cat" },
@@ -14,7 +15,8 @@ const options = [
 ];
 
 export const CashRegister = () => {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { onOpen } = useDisclosure();
+
   return (
     <div className="flex">
       {/* //DIV IZQUIERDA */}
@@ -80,7 +82,10 @@ export const CashRegister = () => {
                 <Button onPress={onOpen} className="bg-casiOrange text-orange ml-auto justify-end">
                   Add Note
                 </Button>
-                <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+
+                {/* <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+
+
                   <ModalContent>
                     {(onClose) => (
                       <>
@@ -104,7 +109,7 @@ export const CashRegister = () => {
                       </>
                     )}
                   </ModalContent>
-                </Modal>
+                </Modal> */}
               </>
             </div>
           </div>
@@ -152,10 +157,9 @@ export const CashRegister = () => {
                 }
               />
             </div>
-            <div className="flex justify-end mt-36">
-              <Button className="bg-orange font-bold" color="primary">
-                Open
-              </Button>
+
+            <div className="flex justify-end mt-3">
+              <CashButton />
             </div>
           </div>
         </div>
@@ -179,7 +183,7 @@ export const CashRegister = () => {
           </CashTitle>
         </div>
         <div className="NotesPrincipal  pt-4 pl-4 pr-3 pb-10 overflow-y-scroll flex flex-col items-center gap-11 overflow-x-hidden h-[543px] ">
-          <div className=" scale-110 shadow-none drop-shadow-non">
+          <div className=" scale-110">
             <CashNotes />
           </div>
           <div className="scale-110 shadow-none drop-shadow-none ">
