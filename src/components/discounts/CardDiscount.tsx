@@ -2,20 +2,22 @@ interface CardDiscountInactiveProps {
   NameProduct: string;
   Code: string;
   Discount: GLfloat;
+  isActive?: boolean;
 }
 
-export const CardDiscountInactive: React.FC<CardDiscountInactiveProps> = ({
+export const CardDiscount: React.FC<CardDiscountInactiveProps> = ({
   NameProduct,
   Code,
+  isActive = false,
   Discount,
 }) => {
   return (
-    <div className="bg-casiBlack rounded-3xl p-6 shadow-md flex align-middle ">
+    <div className={ `${isActive ? 'bg-white' : 'bg-casiBlack'} rounded-3xl p-6 shadow-md flex align-middle`}>
       <div className="flex flex-col gap-6 justify-between">
         {/* contenedor de nombre de producto,icono editar y codigo de producto*/}
         <div className="w-full h-auto flex flex-col">
           <div className="flex justify-between">
-            <p className="text-white font-bold text-3xl">
+            <p className={`${isActive ? 'text-casiBlack' : 'text-white'} font-bold text-3xl`}>
               Discount on {NameProduct}
             </p>
             <svg

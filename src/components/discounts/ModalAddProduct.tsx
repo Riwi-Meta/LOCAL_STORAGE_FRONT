@@ -14,6 +14,9 @@ import {
 } from "@nextui-org/react";
 import { useState } from "react";
 import { CustomInput } from "./CustomInput";
+import { StringInput } from "./InputsModal/StringInput";
+import { NumberInput } from "./InputsModal/NumberInput";
+import { TypeInput } from "./InputsModal/TypeInput";
 
 export const ModalAddProduct = ({ isOpen, onOpenChange }) => {
   const [value, setValue] = useState(null);
@@ -33,83 +36,10 @@ export const ModalAddProduct = ({ isOpen, onOpenChange }) => {
             <ModalBody className="flex flex-col max-w-[55rem] mx-4">
               <div className="w-full flex ">
                 <div className="w-full gap-x-20 gap-y-12 grid grid-cols-2">
-                  <CustomInput name="Name">
-                    <Input
-                      size="sm"
-                      type="string"
-                      label={
-                        <label className="text-gray font-semibold">
-                          Enter Stock
-                        </label>
-                      }
-                    />
-                  </CustomInput>
-                  <CustomInput name="Ammount">
-                    <Input
-                      radius="sm"
-                      size="lg"
-                      type="number"
-                      placeholder="000.000,00"
-                      labelPlacement="outside"
-                      className="placeholder:font-bold placeholder:text-gray"
-                    />
-                  </CustomInput>
-                  <CustomInput name="Type">
-                    <Dropdown>
-                      <DropdownTrigger
-                        className="w-full justify-between"
-                        endContent={
-                          <svg
-                            className="size-6"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            style={{ transform: "rotate(270deg)" }}
-                          >
-                            <path fill="#202020" d="M16 19L5 12l11-7z" />
-                          </svg>
-                        }
-                      >
-                        <Button
-                          size="lg"
-                          className="bg-casiWhite text-gray font-semibold"
-                        >
-                          Enter Type
-                        </Button>
-                      </DropdownTrigger>
-                      <DropdownMenu aria-label="Static Actions">
-                        <DropdownItem>Active</DropdownItem>
-                        <DropdownItem>Inactive</DropdownItem>
-                      </DropdownMenu>
-                    </Dropdown>
-                  </CustomInput>
-                  <CustomInput name="Status">
-                    <Dropdown>
-                      <DropdownTrigger
-                        className="w-full justify-between"
-                        endContent={
-                          <svg
-                            className="size-6"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            style={{ transform: "rotate(270deg)" }}
-                          >
-                            <path fill="#202020" d="M16 19L5 12l11-7z" />
-                          </svg>
-                        }
-                      >
-                        <Button
-                          size="lg"
-                          className="bg-casiWhite text-gray font-semibold"
-                        >
-                          Select Status
-                        </Button>
-                      </DropdownTrigger>
-                      <DropdownMenu aria-label="Static Actions">
-                        <DropdownItem>Active</DropdownItem>
-                        <DropdownItem>Inactive</DropdownItem>
-                      </DropdownMenu>
-                    </Dropdown>
-                  </CustomInput>
+                  <StringInput name="Name" placeholder="Enter Stock" />
+                  <NumberInput name="Ammount" placeholder="000.000,00" />
+                  <TypeInput name="Type" placeholder="Enter Type" />
+                  <TypeInput name="Status" placeholder="Select Status" />
                   <CustomInput name="Date">
                     <DateInput size="lg" value={value} onChange={setValue} />
                   </CustomInput>

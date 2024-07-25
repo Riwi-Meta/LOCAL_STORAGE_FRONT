@@ -8,8 +8,8 @@ import {
   Slider,
 } from "@nextui-org/react";
 
-import { CardDiscountInactive } from "./CardDiscountInactive";
-import { CardDiscountActive } from "./CardDiscountActive";
+import { CardDiscount } from "./CardDiscount";
+
 import { parseDate } from "@internationalized/date";
 import { CardAddDiscount } from "./CardAddDiscount";
 import React from "react";
@@ -142,32 +142,34 @@ export const DiscounstAdmin: React.FC = () => {
       <div className="w-full">
         <div className="gap-4 grid grid-cols-4">
           <div onClick={onOpen}>
-            <CardAddDiscount />
+            <CardAddDiscount  />
           </div>
-          <CardDiscountInactive
+          <CardDiscount
             NameProduct={"Rice"}
             Code={"DR-01655"}
             Discount={5.25}
           />
-          <CardDiscountActive
+          <CardDiscount
             NameProduct={"Meat"}
             Code={"DM-01325"}
             Discount={15.25}
+            isActive
           />
-          <CardDiscountInactive
+          <CardDiscount
             NameProduct={"Rice"}
             Code={"DR-01655"}
             Discount={5.25}
           />
-          <CardDiscountActive
+          <CardDiscount
             NameProduct={"Meat"}
             Code={"DM-01325"}
             Discount={15.25}
           />
-          <CardDiscountActive
+          <CardDiscount
             NameProduct={"Meat"}
             Code={"DM-01325"}
             Discount={15.25}
+              isActive
           />
         </div>
       </div>
