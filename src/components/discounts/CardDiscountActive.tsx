@@ -5,7 +5,7 @@ interface CustomCardDiscountActiveProps {
   [key: string]: any;
 }
 
-export const CardDiscountActive = ({NameProduct, Code,Discount}) => {
+export const CardDiscountActive = ({ NameProduct, Code, Discount }) => {
   return (
     <div className="bg-white rounded-3xl p-6 shadow-md flex align-middle">
       <div className="flex flex-col gap-6">

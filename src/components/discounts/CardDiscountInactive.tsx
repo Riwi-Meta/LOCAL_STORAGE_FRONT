@@ -5,7 +5,7 @@ interface CustomCardDiscountInactiveProps {
   [key: string]: any;
 }
 
-export const CardDiscountInactive = ({NameProduct, Code,Discount}) => {
+export const CardDiscountInactive = ({ NameProduct, Code, Discount }) => {
   return (
     <div className="bg-casiBlack rounded-3xl p-6 shadow-md flex align-middle">
       <div className="flex flex-col gap-6">

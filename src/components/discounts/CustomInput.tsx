@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 
 interface CustomInputProps {
   children: ReactNode;
@@ -6,7 +6,10 @@ interface CustomInputProps {
   [key: string]: any;
 }
 
-export const CustomInput: React.FC<CustomInputProps> = ({ children, name}: CustomInputProps) => {
+export const CustomInput: React.FC<CustomInputProps> = ({
+  children,
+  name,
+}: CustomInputProps) => {
   return (
     <div className="flex flex-col gap-3">
       <p className="font-bold text-subtitleBlack text-xl">{name}</p>
