@@ -1,4 +1,4 @@
-import { DiscounstAdmin } from "../../components/discounts/DiscounstAdmin";
+import { DiscounstAdmin } from "../../components/discounts/DiscountsAdmin";
 import { DiscountsEmployee } from "../../components/discounts/DiscountsEmployee";
 
 export const DiscountsPage = () => {

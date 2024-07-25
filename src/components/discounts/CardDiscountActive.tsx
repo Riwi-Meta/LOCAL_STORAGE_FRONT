@@ -11,15 +11,16 @@ export const CardDiscountActive: React.FC<CardDiscountActiveProps> = ({
 }) => {
   return (
     <div className="bg-white rounded-3xl p-6 shadow-md flex align-middle">
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 justify-between">
         {/* contenedor de nombre de producto,icono editar y codigo de producto*/}
         <div className="w-full h-auto flex flex-col">
           <div className="flex justify-between">
-            <p className="text-black font-bold productNameDiscountCustom text-3xl">
+            <p className="text-black font-bold text-3xl">
               Discount on {NameProduct}
             </p>
             <svg
               className="size-8"
+              cursor={"pointer"}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -41,17 +42,18 @@ export const CardDiscountActive: React.FC<CardDiscountActiveProps> = ({
               </g>
             </svg>
           </div>
-          <p className="text-gray codeProductCustom font-bold">code:{Code}</p>
+          <p className="text-gray font-bold">code:{Code}</p>
         </div>
-        <p className="valueAssignedToProductCustom  text-orange font-bold text-xl">
+        <p className="text-orange font-bold text-xl">
           -{Discount}%
         </p>
         <div className="w-full h-auto flex justify-between">
-          <p className="stateDiscountCustom text-green text-3xl font-bold">
+          <p className="text-green text-3xl font-bold">
             Active
           </p>
           <svg
             className="size-8"
+            cursor={"pointer"}
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

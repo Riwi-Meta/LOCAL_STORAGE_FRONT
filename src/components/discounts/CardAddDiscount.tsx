@@ -6,12 +6,12 @@ export const CardAddDiscount = () => {
 
   return (
     <>
-      <div
+      <button
         onClick={onOpen}
-        className="bg-white rounded-3xl shadow-md p-6 cursor-pointer transition-all hover:animate-Rebote"
+        className="bg-white rounded-3xl shadow-md p-6 cursor-pointer transition-all hover:animate-Rebote min-w-full"
       >
-        <div className="text-orange">
-          <div className="font-bold left-0 top-0 text-3xl bg-transparent text-orange">
+        <div className="text-orange flex justify-start">
+          <div className="font-bold  text-3xl bg-transparent text-orange">
             New Discount
           </div>
         </div>
@@ -55,7 +55,7 @@ export const CardAddDiscount = () => {
             </g>
           </svg>
         </div>
-      </div>
+      </button>
       <ModalAddProduct isOpen={isOpen} onOpenChange={onOpenChange} />
     </>
   );
