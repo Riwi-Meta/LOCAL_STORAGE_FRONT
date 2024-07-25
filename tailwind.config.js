@@ -30,7 +30,7 @@ export default {
     } ,
     animation: {
       Rotar: "AnimacionRotar 0.5s linear reverse",
-      Giro: "AnimacionRotar 0.5s linear",
+      Giro: "AnimacionRotar 1s linear",
       Rebote: "Rebote 1.2s ease-in-out infinite",
     },
   },

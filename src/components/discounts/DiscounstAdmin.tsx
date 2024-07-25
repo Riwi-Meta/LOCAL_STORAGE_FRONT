@@ -4,24 +4,15 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-  Input,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
   useDisclosure,
+  Slider,
 } from "@nextui-org/react";
 
-import { Slider } from "@nextui-org/react";
 import { CardDiscountInactive } from "./CardDiscountInactive";
 import { CardDiscountActive } from "./CardDiscountActive";
-import { DateInput } from "@nextui-org/react";
-import { parseDate, getLocalTimeZone } from "@internationalized/date";
-import { useDateFormatter } from "@react-aria/i18n";
-import React from "react";
+import { parseDate } from "@internationalized/date";
 import { CardAddDiscount } from "./CardAddDiscount";
-import { CustomInput } from "./CustomInput";
+import React from "react";
 export const DiscounstAdmin: React.FC = () => {
   const [useStatus, setUseStatus] = React.useState(false);
 
@@ -32,35 +23,33 @@ export const DiscounstAdmin: React.FC = () => {
     setUseStatus(!useStatus);
   };
 
-  const [value, setValue] = React.useState(parseDate("2024-04-04"));
+  const [] = React.useState(parseDate("2024-04-04"));
 
-  let formatter = useDateFormatter({ dateStyle: "full" });
-
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { onOpen } = useDisclosure();
   return (
     <div className="p-10 flex flex-row space-x-4">
       <div className="w-1/5">
         <div className="bg-white rounded-3xl shadow-md p-6 flex flex-col gap-4 ">
           <label className="relative block">
             <svg
-              className={`size-6 absolute top-[0.4rem] left-2 ${lupaOn}`}
+              className={`size-6 absolute top-[0.4rem] left-2 transition-all ${lupaOn}`}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
                 <path
                   d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
                   stroke="#BEBEBE"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></path>
               </g>
             </svg>
@@ -151,34 +140,34 @@ export const DiscounstAdmin: React.FC = () => {
       </div>
       {/* contenedor de tarjetas y boton para agregar nuevo descuento */}
       <div className="w-full">
-        <div className="gap-8 grid grid-cols-4">
+        <div className="gap-4 grid grid-cols-4">
           <div onClick={onOpen}>
             <CardAddDiscount />
           </div>
           <CardDiscountInactive
             NameProduct={"Rice"}
             Code={"DR-01655"}
-            Discount={"5.25"}
+            Discount={5.25}
           />
           <CardDiscountActive
             NameProduct={"Meat"}
             Code={"DM-01325"}
-            Discount={"15.25"}
+            Discount={15.25}
           />
           <CardDiscountInactive
             NameProduct={"Rice"}
             Code={"DR-01655"}
-            Discount={"5.25"}
+            Discount={5.25}
           />
           <CardDiscountActive
             NameProduct={"Meat"}
             Code={"DM-01325"}
-            Discount={"15.25"}
+            Discount={15.25}
           />
           <CardDiscountActive
             NameProduct={"Meat"}
             Code={"DM-01325"}
-            Discount={"15.25"}
+            Discount={15.25}
           />
         </div>
       </div>

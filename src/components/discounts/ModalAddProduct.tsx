@@ -11,9 +11,8 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
-  useDisclosure,
 } from "@nextui-org/react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { CustomInput } from "./CustomInput";
 
 export const ModalAddProduct = ({ isOpen, onOpenChange }) => {
