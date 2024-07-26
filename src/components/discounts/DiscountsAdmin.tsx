@@ -140,34 +140,34 @@ export const DiscounstAdmin: React.FC = () => {
       </div>
       {/* contenedor de tarjetas y boton para agregar nuevo descuento */}
       <div className="w-full">
-        <div className="gap-4 grid grid-cols-4">
+        <div className="gap-4 flex flex-wrap justify-start">
           <div onClick={onOpen}>
             <CardAddDiscount  />
           </div>
           <CardDiscount
-            NameProduct={"Rice"}
-            Code={"DR-01655"}
+            NameProduct="Rice"
+            Code="DR-01655"
             Discount={5.25}
           />
           <CardDiscount
-            NameProduct={"Meat"}
-            Code={"DM-01325"}
+            NameProduct="Meat"
+            Code="DM-01325"
             Discount={15.25}
             isActive
           />
           <CardDiscount
-            NameProduct={"Rice"}
-            Code={"DR-01655"}
+            NameProduct="Rice"
+            Code="DR-01655"
             Discount={5.25}
           />
           <CardDiscount
-            NameProduct={"Meat"}
-            Code={"DM-01325"}
+            NameProduct="Meat"
+            Code="DM-01325"
             Discount={15.25}
           />
           <CardDiscount
-            NameProduct={"Meat"}
-            Code={"DM-01325"}
+            NameProduct="Meat"
+            Code="DM-01325"
             Discount={15.25}
               isActive
           />

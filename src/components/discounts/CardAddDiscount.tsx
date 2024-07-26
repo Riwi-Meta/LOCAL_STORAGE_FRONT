@@ -8,7 +8,7 @@ export const CardAddDiscount = () => {
     <>
       <button
         onClick={onOpen}
-        className="bg-white rounded-3xl shadow-md p-6 cursor-pointer transition-all hover:animate-Rebote min-w-full"
+        className="bg-white rounded-3xl shadow-md p-6 cursor-pointer transition-all hover:animate-Rebote min-w-80"
       >
         <div className="text-orange flex justify-start">
           <div className="font-bold  text-3xl bg-transparent text-orange">

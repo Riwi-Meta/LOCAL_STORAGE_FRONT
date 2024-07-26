@@ -34,5 +34,10 @@ export default {
       Rebote: "Rebote 1.2s ease-in-out infinite",
     },
   },
+  screens: {
+    'tablet': '640px',
+    'laptop': '1024px',
+    'desktop': '1830px',
+  },
   plugins: [addDynamicIconSelectors(), nextui()],
 };
